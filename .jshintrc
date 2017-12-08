@@ -1,0 +1,16 @@
+{
+  "unused": "vars",
+  "maxparams": 5,
+  "maxdepth": 5,
+  "maxstatements": 400,
+  "maxlen": 200,
+  "strict": "implied",
+  "jquery": "$",
+  "devel": "console",
+  "browser": "chrome",
+  "globals": {
+    "require": true,
+    "Backbone": true,
+    "define": true
+  }
+}

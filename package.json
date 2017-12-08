@@ -1,0 +1,25 @@
+{
+  "name": "phoenix.platform.front",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "jquery": "3.2.1",
+    "requirejs": "2.3.5",
+    "backbone": "1.3.3",
+    "suren-restful": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PhoenixAutotest/phoenix.platform.front.git"
+  },
+  "author": "suren",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PhoenixAutotest/phoenix.platform.front/issues"
+  },
+  "homepage": "https://github.com/PhoenixAutotest/phoenix.platform.front#readme"
+}

@@ -3,7 +3,13 @@ require.config({
     paths: {
         underscore: 'underscore/underscore',
         backbone: 'backbone/backbone',
-        jquery: 'jquery/dist/jquery'
+        jquery: 'jquery/dist/jquery',
+        require_css: 'require-css/css',
+        require_text: 'require-text/index',
+        bootstrap: 'bootstrap',
+        rest: 'suren-restful/restFul',
+        router: '../router',
+        module: '../modules/module'
     },
     shim: {
         'underscore':{
@@ -16,6 +22,6 @@ require.config({
     }
 });
 
-require(['jquery', 'backbone'],function($){
+require(['jquery', 'backbone', 'router', 'views/view.js'], function($){
     Backbone.history.start();
 });

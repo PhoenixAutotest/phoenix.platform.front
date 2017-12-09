@@ -1,0 +1,11 @@
+<div class="header">
+	<div class="logo">
+	</div>
+	<div class="header-nav">
+		<ul>
+			<%for(var i = 0; i < menus.length; i++){var menu = menus[i];%>
+			<li><a href="<%=menu.href%>"><%=menu.name%></a></li>
+			<%}%>
+		</ul>
+	</div>
+</div>

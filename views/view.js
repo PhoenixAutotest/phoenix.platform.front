@@ -1,27 +1,23 @@
 define(['backbone', '../modules/module.js',
+    'text!../../templates/header.html',
     'require_css!bootstrap/dist/css/bootstrap.css',
-    'require_css!../../css/index.css'], function (b, M) {
-    var Main = Backbone.View.extend({
+    'require_css!../../css/index.css'], function (Backbone, Menu, header) {
+    var MenuView = Backbone.View.extend({
         el: $('body'),
-        show: function (model) {
-            $.get('templates/header.html', function (tmp) {
-                var template = _.template(tmp)({
-                    menus: model.get('menus')
-                });
-                $('body').append(template);
+        show: function (menus) {
+            var template = _.template(header)({
+                menus: menus
             });
+            $('body').append(template);
         }
     });
 
-    var m = new M({
-        name: 'name'
+    var m = new Menu();
+    m.fetch({
+        success: function (model, response) {
+            console.log(model);
+            console.log(response);
+            new MenuView().show(response);
+        }
     });
-    m.set('menus', [{
-        name: 'name1',
-        href: 'http://baidu.com'
-    }, {
-        name: 'name2',
-        href: 'http://baidu.com'
-    }]);
-    new Main().show(m);
 });

@@ -5,9 +5,9 @@ require.config({
         backbone: 'backbone/backbone',
         jquery: 'jquery/dist/jquery',
         require_css: 'require-css/css',
-        require_text: 'require-text/index',
+        text: 'text/text',
         bootstrap: 'bootstrap',
-        rest: 'suren-restful/restFul',
+        suren_restful: 'suren-restful/restFul',
         router: '../router',
         module: '../modules/module'
     },
@@ -22,6 +22,11 @@ require.config({
     }
 });
 
-require(['jquery', 'backbone', 'router', 'views/view.js'], function($){
+require(['jquery', 'backbone', 'suren_restful', 'router', 'views/view.js'], function($, Backbone, rest){
+    Backbone.ajax = function() {
+        return Backbone.$.ajax.apply($.suAjax, arguments);
+    };
     Backbone.history.start();
+
+    console.log(rest);
 });

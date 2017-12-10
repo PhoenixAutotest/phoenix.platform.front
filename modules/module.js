@@ -1,10 +1,9 @@
 define(['backbone'], function () {
-    var M = Backbone.Model.extend({
-        url: 'baidu.com',
+    var Menu = Backbone.Model.extend({
+        url: 'debug/menus.json',
         initialize: function () {
-            console.log('init');
         }
     });
 
-    return M;
+    return Menu;
 });
